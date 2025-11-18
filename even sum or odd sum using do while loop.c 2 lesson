@@ -1,0 +1,24 @@
+//write a c program to find even sum and odd sum from 0 to n using do while loop
+#include <stdio.h>
+int main()
+{
+    int n, i = 0, even_sum = 0, odd_sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    do
+    {
+        if (i % 2 == 0)
+        {
+            even_sum += i;
+        }
+        else
+        {
+            odd_sum += i;
+        }
+        i++;
+    } 
+	while (i <= n);
+    printf("Even sum: %d\n", even_sum);
+    printf("Odd sum: %d\n", odd_sum);
+    return 0;
+}
