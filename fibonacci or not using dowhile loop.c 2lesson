@@ -1,0 +1,26 @@
+//write a c program to find the whether given number is fibonacci or not using do while loop
+#include<stdio.h>
+int main()
+{
+    int n, f1, f2, f3, found = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    f1 = 0;
+    f2 = 1;
+    do {
+    if (n == f1) {
+    found = 1;
+    break;
+   }
+   f3 = f1 + f2;
+   f1 = f2;
+   f2 = f3;
+   } 
+   while (n >= f1);
+   if (found) {
+   printf("Fibonacci num\n");
+   } else {
+   printf("Not a fibonacci number\n");
+   }
+   return 0;
+}
